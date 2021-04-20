@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+.showcase{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 2; 
+    transition: 1.5s;   
+}
+.showcase.active{
+    right: 300px;
+}
+.showcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    cursor: pointer;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    /*background: url("/static/css/menu.jpg");*/
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+.toggle.active{
+    background: url("/static/css/close.png");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: blueviolet;
+    mix-blend-mode: overlay;
+    
+}
+.text{
+    position: relative;
+    z-index: 10;
+}
+.text h1{
+    top: 150px;
+    font-size: 2em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.text p{
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+}
+.text a{
+   display: inline-block;
+   font-size: 1em;
+   background: #fff;
+   padding: 10px 30px;
+   text-decoration: none;
+   color: #111; 
+   margin-top: 10px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   transition: 0.2s;
+}
+.text a:hover{
+    letter-spacing: 4px;
+ }
+.social{
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social li{
+    list-style: none;
+}
+.social li a{
+    display: inline-block;
+    filter: invert(1);
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+.social li a:hover{
+    transform: scale(0.5) translateY(-15px);
+    
+}
+
+.login-wrapper{
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form{
+	position: relative;
+	width: 100%;
+	max-width: 380px;
+	margin: 6% auto;
+	background: rgba(0,0,0,0.7);
+	border-radius: 10px;
+	color:violet;
+	box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+	padding: 80px 40px 40px;
+	
+}
+.form-box{
+	position: relative;
+	width: 100%;
+	max-width: 380px;
+	margin: 6% auto;
+	background: rgba(0,0,0,0.7);
+	border-radius: 10px;
+	color: #fff;
+	box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+	padding: 80px 40px 40px;
+	
+}
+.form-box::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,0.08);
+	border-radius: 10px;
+	pointer-events: none;
+}
+.form::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,0.08);
+	border-radius: 10px;
+	pointer-events: none;
+}
+.form img{
+	position: absolute;
+	top: -50px;
+	left: calc(50% -50px);
+	width: 100px;
+	background: rgba(255,255,255,0.8);
+	border-radius: 50%;
+}
+.form h2{
+	text-align: center;
+	letter-spacing: 1px;
+	margin-bottom: 2rem;
+}
+.form .input-group{
+	position: relative;
+}
+.form .input-group input{
+	width: 100%;
+	padding: 10px 0;
+	font-size:  1rem;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background-color:transparent;
+	color: inherit;	
+}
+.form .input-group label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 1rem;
+	pointer-events: none;
+	transition: .3s ease-out;
+}
+.form .input-group input:focus + label,
+.form .input-group input:valid + label{
+	transform: translateY(-18px);
+	color:mediumpurple;
+	font-size: .8rem;
+}
+.form-box img{
+	position: absolute;
+	top: -50px;
+	left: calc(50% -50px);
+	width: 100px;
+	background: rgba(255,255,255,0.8);
+	border-radius: 50%;
+}
+.form-box h2{
+	text-align: center;
+	letter-spacing: 1px;
+	margin-bottom: 2rem;
+}
+.form-box .input-group{
+	position: relative;
+}
+.form-box .input-group input{
+	width: 100%;
+	padding: 10px 0;
+	font-size:  1rem;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background-color:transparent;
+	color: inherit;	
+}
+.submit-btn{
+	display: block;
+	margin-left: auto;
+	border: none;
+	outline: none;
+	background: rebeccapurple;
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.registration{
+	color:inherit;
+}
+#registration{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 0;
+	z-index: 1;
+	background: rgb(22, 129, 124);
+	opacity: 0;
+	transition: 0.6s;
+}
+#registration:target{
+	height: 100%;
+	opacity: 1;
+}
+.close{
+	position:absolute;
+	right:1.5rem;
+	top: 0.5rem;
+	font-size: 2rem;
+	font-weight: 900;
+	text-decoration: none;
+	color:inherit;
+}
+.forgot-pw{
+	color:inherit;
+}
+#forgot-pw{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 0;
+	z-index: 1;
+	background: rgb(22, 129, 124);
+	opacity: 0;
+	transition: 0.6s;
+}
+#forgot-pw:target{
+	height: 100%;
+	opacity: 1;
+}
+.closepw{
+	position:absolute;
+	right:1.5rem;
+	top: 0.5rem;
+	font-size: 2rem;
+	font-weight: 900;
+	text-decoration: none;
+	color:inherit;
+}
+
+
+.quiz {
+	position: relative;
+	width: 100%;
+	max-width: 380px;
+	margin: 6% auto;
+	background: rgba(0,0,0,0.7);
+	border-radius: 10px;
+	color:violet;
+	box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+	padding: 80px 40px 40px;
+}
+.quiz .questions{
+	position: relative;
+}
+.quiz .questions input{
+	width: 100%;
+	padding: 10px 0;
+	font-size:  1rem;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background-color:transparent;
+	color: inherit;	
+}
+.quiz .questions label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 1rem;
+	pointer-events: none;
+	transition: .3s ease-out;
+}
+.quiz .questions input:focus + label,
+.quiz .questions input:valid + label{
+	transform: translateY(-18px);
+	color:mediumpurple;
+	font-size: .8rem;
+}
+/*.quiz-box img{
+	position: absolute;
+	top: -50px;
+	left: calc(50% -50px);
+	width: 100px;
+	background: rgba(255,255,255,0.8);
+	border-radius: 50%;
+}
+.form-box h2{
+	text-align: center;
+	letter-spacing: 1px;
+	margin-bottom: 2rem;
+}*/
+.quiz-box .questions{
+	position: relative;
+}
+.quiz-box .questions input{
+	width: 100%;
+	padding: 10px 0;
+	font-size:  1rem;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background-color:transparent;
+	color: inherit;	
+}
+input {
+	margin-bottom: 20px;
+	display: block;
+}
+
+#textbox {
+	height: 25px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	padding-left: 5px;
+}
+
+
+#button {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
+}
+
+
+
+#button:hover {
+	background: white;
+	border: 1px solid green;
+	color: black;
+	cursor: pointer;
+
+}
+
+#after_submit {
+	visibility: hidden;
+	background: #ff5459;
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+	margin-left: 20px;
+	font-size: 30px;
+
+
+}
+
+#picture {
+	width: 375px;
+	height: 245px;
+}
+
+
+
+#mc {
+	display: inline;
+} 
+
+
+@media(max-width: 991px){
+    .showcase,
+    .showcase header{
+       padding: 40px; 
+    }
+    .text h1{
+        font-size: 1.5em;
+    }
+}
+
+
+

@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Save your time</title>
+<link href ="static/css/style3.css" rel ="stylesheet">
+<link href=https://fonts.googleapis.com/css?family=Lato rel="stylesheet">
+<script src = "main.js"></script>
+
+</head>
+
+<body>
+<section class="showcase">
+<header>
+    <img src="/static/css/logo.PNG" class="logo" width='200px' height='65px'>
+    
+</header>
+
+<video src="/static/css/World1992.mp4" muted loop autoplay></video>
+<div class="overlay"></div>
+<form class = "quiz" name = "quiz">
+    <h2>Survey</h2>
+    <p class = "questions">How are you feeling today?</p>
+    <input type = "radio" id = "mc" name = "question1" value = "Great"> Great<br>
+    <input type = "radio" id = "mc" name = "question1" value = "Good"> Good<br>
+    <input type = "radio" id = "mc" name = "question1" value = "Okay"> Okay<br>
+    <input type = "radio" id = "mc" name = "question1" value = "Not so good"> Not so good<br>
+    <p class = "questions">Due to COVID have you had to spend more time at home?</p>
+    <input type = "radio" id = "mc" name = "question2" value = "Yes"> yes<br>
+    <input type = "radio" id = "mc" name = "question2" value = "No"> No<br>
+    
+    
+    <p class = "questions">Did you used social Media today? (such as facebook, snapchat, twitter, etc)</p>
+    <input type = "radio" id = "mc" name = "question3" value = "Yes"> Yes<br>
+    <input type = "radio" id = "mc" name = "question3" value = "No"> No<br>
+    
+    <p class = "questions">If so, how many hours?</p>
+    
+    <input type = "radio" id = "mc" name = "question4" value = "16 or more"> 16 or more<br>
+    <input type = "radio" id = "mc" name = "question4" value = "10-16 hours"> 10-16 hours<br>
+    <input type = "radio" id = "mc" name = "question4" value = "5-10 hours"> 5-10 hours<br>
+    <input type = "radio" id = "mc" name = "question4" value = "5 or less"> 5 or less<br>
+    <input type = "radio" id = "mc" name = "question4" value = "0">0<br>
+    
+    <p class = "questions">How much excercise have you done?</p>
+    
+    <input type = "radio" id = "mc" name = "question5" value = "2 hours or more"> 2 hours or more<br>
+    <input type = "radio" id = "mc" name = "question5" value = "1 hour to 2 hours"> 1 hour to 2 hours<br>
+    <input type = "radio" id = "mc" name = "question5" value = "30 minutes to 1 hour"> 30 minutes to 1 hour<br>
+    <input type = "radio" id = "mc" name = "question5" value = "30 minutes or less">  30 minutes or less<br>
+    <input type = "radio" id = "mc" name = "question5" value = "none">none<br>
+    
+    <p class = "questions">Have you spend anytime outside?</p>
+    
+    <input type = "radio" id = "mc" name = "question6" value = "Yes"> Yes<br>
+    <input type = "radio" id = "mc" name = "question6" value = "No"> No<br>
+    
+    <p class = "questions">If so, how many hours?</p>
+    
+    <input type = "radio" id = "mc" name = "question7" value = "2 hours or more"> 2 hours or more<br>
+    <input type = "radio" id = "mc" name = "question7" value = "1 hour to 2 hours"> 1 hour to 2 hours<br>
+    <input type = "radio" id = "mc" name = "question7" value = "30 minutes to 1 hour"> 30 minutes to 1 hour<br>
+    <input type = "radio" id = "mc" name = "question7" value = "30 minutes or less">  30 minutes or less<br>
+    <input type = "radio" id = "mc" name = "question7" value = "15 minutes or less"> 15 minutes or less<br>
+
+    <p class = "questions">Have your phone and screen time increase?</p>
+    
+    <input type = "radio" id = "mc" name = "question8" value = "Yes"> Yes<br>
+    <input type = "radio" id = "mc" name = "question8" value = "No"> No<br>
+    
+    <p class = "questions">If so, about how much has it increase by?</p>
+    
+    <input type = "radio" id = "mc" name = "question9" value = "2 hours or more"> 2 hours or more<br>
+    <input type = "radio" id = "mc" name = "question9" value = "1 hour to 2 hours"> 1 hour to 2 hours more<br>
+    <input type = "radio" id = "mc" name = "question9" value = "30 minutes to 1 hour"> 30 minutes to 1 hour more<br>
+    <input type = "radio" id = "mc" name = "question9" value = "30 minutes or less">  15 minutes to 30 minutes more<br>
+    <input type = "radio" id = "mc" name = "question9" value = "15 minutes or less"> 5 minutes to 15 minutes more<br>
+
+    <p class = "questions">Do you see this as an issue?</p>
+    
+    <input type = "radio" id = "mc" name = "question10" value = "Yes"> Yes<br>
+    <input type = "radio" id = "mc" name = "question10" value = "No"> No<br>
+    
+    <a href="C:\Users\santanaa4\Documents\Web_Development_Final_Project\web_development\templates">
+    <button>Submit</button>
+    </a>
+</form>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+
+var eventposted=0;
+
+$(document).ready(function(){
+ $('input.button').click(function() {
+   window.setInterval(foo, 100);
+ });
+});
+
+function foo(){
+ if(($(".button is-block is-info is-large is-fullwidth").is(':visible')) && (eventposted==0)){
+   window.location = "<b>profile</b>";
+   eventposted=1;
+ }
+}
+
+</script>
+<div id = "after_submit">
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<img id = "picture">
+</section>
+</div>
+</html>
+
+</body>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="showcase">
+<header>
+    <img src="/static/css/logo.PNG" class="logo" width='200px' height='65px'>
+    
+</header>
+<video src="/static/css/World1992.mp4" muted loop autoplay></video>
+<div class="overlay"></div>
+<div class="column is-4 is-offset-4">
+   
+    <div class="box">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+        <form class="form" method="POST" action="/login">
+           
+            <h2>Login</h2>
+            <div class="field">
+                <div class="input-group">
+                    <input class="input is-large" type="email" name="email" placeholder="Your Email" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="input-group">
+                    <input class="input is-large" type="password" name="password" placeholder="Your Password">
+                </div>
+            </div>
+            <div class="field">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Remember me
+                </label>
+            </div>
+            <button class="button is-block is-info is-large is-fullwidth">Login</button>
+        </form>
+        <div id='login' class="login-wrapper">
+        
+
+
+    </div>
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style1.css') }}">
+	<title>User Profile </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" />
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Survey', 'Hours per Day'],
+          ['Question 1',     11],
+          ['Question 2',      2],
+          ['Question 3',  2],
+          ['Question 4', 2],
+          ['Question 5',    7],
+		  ['Question 6',     11],
+          ['Question 7', 2],
+          ['Question 8', 2],
+          ['Question 9', 2],
+          ['Question 10', 7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+	<section class="showcase">
+	<header>
+		<img src="/static/css/logo.PNG" class="logo" width='200px' height='65px'>
+		
+	</header>
+	<video src="/static/css/World1992.mp4" muted loop autoplay></video>
+	<div class="overlay"></div>
+
+	
+	<div class="text">
+		<div id="piechart_3d" style="width: 500px; height: 500px;"></div>
+		<h1>
+		  Your results and recommendations    
+		</h1>
+		<p>There is a lot you get done in one day is just a matter of creating a balance.
+			Make sure that just as enough time you spend on your social media or inside, try 
+			to spend some time outside.
+		</p>
+	</div>
+		
+	<div class="text">
+		<img src="/static/css/feeltheburn.jpg" class="logo" width='200px' height='200px'>
+
+		<h1>
+		 For this week... 
+		</h1>
+		<p>Try to work out or take a walk!! Make sure you feel that burn!
+		</p>
+		<p>
+			Fun Fact: "Regular physical activity can improve your muscle strength and boost your endurance. Exercise delivers oxygen and nutrients to your tissues and helps your cardiovascular system work more efficiently. And when your heart and lung health improve, you have more energy to tackle daily chores."
+		</p>
+
+	<img src="/static/css/monday.jpg" class="logo" width='200px' height='200px'>
+			
+	<div class="text">
+		<h1>
+			We understand
+		</h1>
+		<p>We understand it can be hard to work out on a Monday, but try to stepout
+			and spend time with you friends.
+		</p>
+	<img src="/static/css/yuj6.jpg" class="logo" width='200px' height='200px'>
+			
+	<div class="text">
+		<h1>
+		 Be Awesome    
+		</h1>
+		<p>
+			Remember you can be as cool as Professor Jones!
+		</p>
+	</section>
+</body>
+</html>
+
+{% endblock %}
+
